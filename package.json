@@ -34,7 +34,8 @@
     "react-icons": "^4.2.0",
     "sass": "^1.32.8",
     "theme-ui": "^0.7.5",
-    "three": "^0.128.0"
+    "three": "^0.128.0",
+    "unsplash-js": "^7.0.10"
   },
   "devDependencies": {
     "@storybook/preset-scss": "^1.0.3",
