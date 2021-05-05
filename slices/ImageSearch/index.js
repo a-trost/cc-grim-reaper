@@ -1,46 +1,57 @@
 import React, { useState, useEffect, useRef } from "react";
-import { RichText } from "prismic-reactjs";
+
+const createSpeechRecognition = (onResult) => {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  const SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  const sr = new SpeechRecognition();
+  sr.continuous = true;
+  sr.lang = "en-US";
+  if (onResult) sr.onresult = onResult;
+
+  return sr;
+};
 
 const MySlice = ({ slice }) => {
   const [searchText, setSearchText] = useState(null);
   const [images, setImages] = useState([]);
-  let SpeechRecognition = useRef();
-  let recognition = useRef(null);
-
-  useEffect(() => {
-    // if (!window) return null;
-
-    SpeechRecognition.current =
-      window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    recognition.current = new SpeechRecognition.current();
-    recognition.current.continuous = true;
-    recognition.current.lang = "en-US";
-
-    recognition.current.onresult = (e) => {
-      setSearchText(e.results[e.results.length - 1][0].transcript);
-
-      handleSubmit(null, e.results[e.results.length - 1][0].transcript);
-    };
-  }, []);
-
-  const handleRecord = () => {
-    // Not working for Firefox, maybe for Safari
-    recognition.current.start();
+  const [isRecording, setIsRecording] = useState(false);
+  const startRecording = () => {
+    if (recognition.current && !isRecording) {
+      // Not working for Firefox, maybe for Safari
+      recognition.current.start();
+      setIsRecording(true);
+    }
   };
+  const stopRecording = () => {
+    if (recognition.current && isRecording) {
+      // Not working for Firefox, maybe for Safari
+      recognition.current.stop();
+      setIsRecording(false);
+    }
+  };
+  const toggleRecording = isRecording ? stopRecording : startRecording;
 
-  const handleSubmit = (e, search) => {
+  const fetchUnsplashImages = async (e, search) => {
     if (e) e.preventDefault();
 
-    console.log(searchText);
-    fetch(`/api/unsplash/${searchText || search}`)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setImages(data);
-      });
+    const res = await fetch(`/api/unsplash/${searchText || search}`);
+    const json = await res.json();
+
+    setImages(json);
   };
+
+  const onSpeechRecognitionResult = (e) => {
+    setSearchText(e.results[e.results.length - 1][0].transcript);
+    fetchUnsplashImages(null, e.results[e.results.length - 1][0].transcript);
+  };
+  const recognition = useRef(
+    createSpeechRecognition(onSpeechRecognitionResult)
+  );
 
   return (
     <section className="text-gray-600 body-font">
@@ -48,15 +59,20 @@ const MySlice = ({ slice }) => {
         <h2 className="mb-20 text-5xl font-medium text-center text-red-900 font-display title-font sm:text-6xl">
           {slice.primary.title}
         </h2>
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" onSubmit={fetchUnsplashImages}>
           <input
             className="block w-full border"
             type="text"
             id="search"
             value={searchText}
+            onChange={(e) => setSearchText(e.currentTarget.value)}
           />
-          <button type="button" className="block border" onClick={handleRecord}>
-            Record
+          <button
+            type="button"
+            className="block border"
+            onClick={toggleRecording}
+          >
+            {isRecording ? "Stop" : "Start"} Recording
           </button>
           <button className="block border">Submit</button>
         </form>
