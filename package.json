@@ -19,6 +19,7 @@
   "dependencies": {
     "@fontsource/freckle-face": "^4.2.2",
     "@fontsource/open-sans": "^4.2.2",
+    "cors": "^2.8.5",
     "essential-slices": "^1.0.4",
     "faker": "^5.5.3",
     "gsap": "^3.6.1",
