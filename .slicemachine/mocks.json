@@ -1,0 +1,53 @@
+{
+  "HeroMain": {
+    "primary": {
+      "heading": {
+        "content": null
+      },
+      "buttonText": {
+        "content": null
+      },
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
+  },
+  "TestimonialSection": {
+    "primary": {
+      "title": {
+        "content": null
+      }
+    },
+    "items": {
+      "body": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "name": {
+        "content": null
+      },
+      "title": {
+        "content": null
+      }
+    }
+  },
+  "ImageSearch": {},
+  "SocialShare": {
+    "primary": {
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "title": {
+        "content": null
+      }
+    }
+  }
+}

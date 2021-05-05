@@ -1,0 +1,22 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "SocialShare",
+    "primary": {
+      "title": "deploy viral e-markets",
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Ad reprehenderit ea pariatur consectetur. Do irure adipisicing ullamco eiusmod do sint nostrud.",
+          "spans": []
+        }
+      ],
+      "subheading": "maximize value-added relationships"
+    },
+    "items": [],
+    "slice_type": "social_share"
+  }
+]
