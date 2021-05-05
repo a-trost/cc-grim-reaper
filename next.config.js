@@ -1,3 +1,7 @@
-const withTM = require('next-transpile-modules')(['next-slicezone', 'essential-slices']);
+const { withPlugins } = require("next-compose-plugins");
 
-module.exports = withTM();
+const nextConfig = { target: "serverless" };
+
+const withTM = require("next-transpile-modules")(["next-slicezone"]);
+
+module.exports = withPlugins([withTM()], nextConfig);
