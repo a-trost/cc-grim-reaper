@@ -1,6 +1,7 @@
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import "../styles/styles.scss";
+import "@fontsource/freckle-face";
 import "@fontsource/open-sans";
 
 function MyApp({ Component, pageProps }) {
