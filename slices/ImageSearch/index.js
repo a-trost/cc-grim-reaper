@@ -50,7 +50,7 @@ const MySlice = ({ slice }) => {
   };
 
   const onSpeechRecognitionResult = (e) => {
-    setIsRecording(false);
+    stopRecording();
     setSearchText(e.results[e.results.length - 1][0].transcript);
     fetchUnsplashImages(null, e.results[e.results.length - 1][0].transcript);
   };
