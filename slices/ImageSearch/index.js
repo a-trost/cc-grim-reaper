@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Credit from "../../components/Credit";
 import { FaMicrophone, FaMicrophoneSlash } from "react-icons/fa";
 
 const createSpeechRecognition = (onResult) => {
@@ -59,7 +60,7 @@ const MySlice = ({ slice }) => {
   );
 
   return (
-    <section className="text-gray-600 body-font">
+    <section className="relative text-gray-600 body-font bg-gray-50">
       <div className="container px-5 py-24 mx-auto">
         <h2 className="mb-16 text-5xl font-medium text-center text-red-900 font-display title-font sm:text-6xl">
           {slice.primary.title}
@@ -111,6 +112,10 @@ const MySlice = ({ slice }) => {
           })}
         </ul>
       </div>
+      <Credit
+        author="Louis Hoebregts"
+        twitter="https://twitter.com/Mamboleoo"
+      />
     </section>
   );
 };
