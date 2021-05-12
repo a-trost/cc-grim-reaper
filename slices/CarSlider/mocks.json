@@ -1,0 +1,70 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "CarSlider",
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Voluptate do eiusmod fugiat aliqua incididunt fugiat ad. Aliquip in ullamco labore esse velit tempor aliquip ipsum tempor eiusmod consectetur cupidatat. Quis deserunt et voluptate.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Elit anim in anim elit labore aliqua. Id ipsum et non amet mollit consectetur excepteur et do voluptate dolore deserunt. In ad aute ut mollit voluptate quis in nisi ea ad ullamco voluptate nulla.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [
+      {
+        "carName": "benchmark transparent schemas",
+        "tagline": "enhance web-enabled models",
+        "price": 6649,
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "carName": "envisioneer web-enabled bandwidth",
+        "tagline": "transform distributed vortals",
+        "price": 7585,
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "carName": "reinvent ubiquitous communities",
+        "tagline": "facilitate dot-com applications",
+        "price": 7626,
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+        }
+      }
+    ],
+    "slice_type": "car_slider"
+  }
+]
