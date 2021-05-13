@@ -30,37 +30,33 @@
       },
       "items": {
         "carName": {
-          "type": "Text",
           "config": {
-            "label": "",
-            "id": "carName",
+            "label": "Car Name",
             "placeholder": ""
-          }
+          },
+          "type": "Text"
         },
         "tagline": {
-          "type": "Text",
           "config": {
-            "label": "",
-            "id": "tagline",
+            "label": "Tag Line",
             "placeholder": ""
-          }
+          },
+          "type": "Text"
         },
         "price": {
-          "type": "Number",
           "config": {
-            "label": "",
-            "id": "price",
+            "label": "Price",
             "placeholder": ""
-          }
+          },
+          "type": "Number"
         },
         "image": {
-          "type": "Image",
           "config": {
-            "id": "image",
-            "label": "",
+            "label": "Image",
             "constraint": {},
             "thumbnails": []
-          }
+          },
+          "type": "Image"
         }
       }
     }

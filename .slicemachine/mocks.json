@@ -50,5 +50,14 @@
       }
     }
   },
-  "CarSlider": {}
+  "CarSlider": {
+    "items": {
+      "carName": {
+        "content": null
+      },
+      "tagline": {
+        "content": null
+      }
+    }
+  }
 }

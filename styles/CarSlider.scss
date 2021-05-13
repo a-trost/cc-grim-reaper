@@ -1,0 +1,181 @@
+.car-slider {
+  animation: start 1s 700ms forwards;
+  opacity: 0;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.02) 20%,
+      transparent 20%
+    ),
+    radial-gradient(rgba(255, 255, 255, 0.02) 20%, transparent 20%);
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+
+  input {
+    display: none;
+  }
+
+  input:not(:checked) {
+    & + div {
+      .title {
+        h2,
+        h3 {
+          opacity: 0;
+          transition: transform 1000ms cubic-bezier(0.73, -0.005, 0, 1.005),
+            opacity 500ms;
+        }
+        h2 {
+          transform: translateX(-500px);
+        }
+        h3 {
+          transform: translateX(500px);
+        }
+      }
+      label {
+        opacity: 0;
+      }
+      .price {
+        transform: rotate(10deg) translateY(100px);
+        opacity: 0;
+        transition: transform 300ms, opacity 200ms;
+      }
+      .car {
+        animation: carOut 600ms 100ms forwards
+          cubic-bezier(0.92, 0.005, 1, 0.565);
+        .wheel {
+          animation: wheelOut 600ms forwards cubic-bezier(0.92, 0.005, 1, 0.565);
+        }
+      }
+      .smoke {
+        div {
+          opacity: 0;
+          @for $i from 1 through 10 {
+            &:nth-of-type(#{$i}) {
+              left: random(100) - 200px;
+              bottom: random(100) + 50px;
+            }
+          }
+        }
+      }
+      pointer-events: none;
+    }
+  }
+  input:checked {
+    & + div {
+      .title {
+        h2,
+        h3 {
+          opacity: 1;
+          transition: transform 1000ms cubic-bezier(0, 0.855, 0.21, 1),
+            opacity 500ms;
+        }
+      }
+      .price {
+        transition: transform 300ms, opacity 200ms;
+      }
+      .car {
+        animation: carIn 600ms 600ms forwards cubic-bezier(0, 0.63, 0.21, 1);
+        transform: translateY(-50%) translateX(-4200px);
+        .wheel {
+          animation: wheelIn 600ms 600ms forwards cubic-bezier(0, 0.63, 0.21, 1);
+        }
+      }
+    }
+  }
+
+  .wheel {
+    width: 16%;
+    position: absolute;
+
+    &--front {
+      right: 11%;
+      bottom: -21px;
+    }
+
+    &--back {
+      left: 15%;
+      bottom: -21px;
+    }
+  }
+
+  .smoke {
+    position: relative;
+    z-index: -1;
+
+    div {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 100%;
+      left: 16%;
+      bottom: 0;
+    }
+
+    @for $i from 1 through 10 {
+      div {
+        &:nth-of-type(#{$i}) {
+          $size: random(30) + 10px;
+          width: $size;
+          height: $size;
+          transition: all
+            700ms
+            random(300) +
+            10ms
+            cubic-bezier(0, 0.695, 0.19, 1.01);
+        }
+      }
+    }
+  }
+
+  .shadow {
+    width: 490px;
+    height: 60px;
+    border-radius: 100%;
+    background: #0000000f;
+    top: calc(50% + 80px);
+    z-index: -1;
+  }
+
+  @keyframes carIn {
+    from {
+      transform: translateY(-50%) translateX(-800px);
+    }
+    to {
+      transform: translateY(-50%) translateX(-0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes carOut {
+    from {
+      transform: translateY(-50%) translateX(0px);
+    }
+    to {
+      transform: translateY(-50%) translateX(800px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes wheelIn {
+    from {
+      transform: rotate(-1000deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes wheelOut {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(1000deg);
+    }
+  }
+
+  @keyframes start {
+    to {
+      opacity: 1;
+    }
+  }
+}
