@@ -73,7 +73,7 @@ const MySlice = ({ slice }) => {
             {/* Slide End */}
           </React.Fragment>
         ))}
-        <div class="shadow absolute left-0 right-0 transform -translate-y-1/2 m-auto"></div>
+        <div class="shad absolute left-0 right-0 transform -translate-y-1/2 m-auto"></div>
       </div>
       <Credit
         author="Jamie Coulter"
