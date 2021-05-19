@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RichText } from "prismic-reactjs";
+import Credit from "../../components/Credit";
 
 const MySlice = ({ slice }) => {
   const [prize, setPrize] = useState("");
@@ -43,6 +44,11 @@ const MySlice = ({ slice }) => {
           )}
         </div>
       </div>
+      <Credit
+        author="Ryan Mulligan"
+        twitter="https://www.twitter.com/hexagoncircle"
+        pending
+      />
     </section>
   );
 };
