@@ -13,7 +13,7 @@ const MySlice = ({ slice }) => {
   }
 
   return (
-    <section className="flex justify-center bg-gray-50">
+    <section className="relative flex justify-center bg-gray-50">
       <div className="w-full py-18 md:py-32 max-w-7xl">
         {slice.primary.title && (
           <h2 className="mb-8 text-6xl font-medium text-center text-gray-700">
