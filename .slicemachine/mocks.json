@@ -59,5 +59,23 @@
         "content": null
       }
     }
+  },
+  "DealWheel": {
+    "primary": {
+      "buttonText": {
+        "content": null
+      },
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "items": {
+      "text": {
+        "content": null
+      }
+    }
   }
 }
