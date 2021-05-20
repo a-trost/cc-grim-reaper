@@ -90,7 +90,7 @@ const MySlice = ({ slice }) => {
         </h2>
       )}
       {slice.primary.description && (
-        <p className="max-w-2xl mx-auto text-center mb-14">
+        <p className="max-w-2xl mx-auto text-xl text-center mb-14">
           {RichText.asText(slice.primary.description)}
         </p>
       )}
