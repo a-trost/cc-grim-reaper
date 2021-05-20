@@ -78,6 +78,7 @@ const MySlice = ({ slice }) => {
       <Credit
         author="Jamie Coulter"
         twitter="https://twitter.com/jamiecoulter89"
+        codepen="https://codepen.io/jcoulterdesign/pen/26a02d481daa92e18104105c2e44fb0b"
       />
     </section>
   );

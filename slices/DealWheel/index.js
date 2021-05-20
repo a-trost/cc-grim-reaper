@@ -142,6 +142,7 @@ const MySlice = ({ slice }) => {
       <Credit
         author="Ryan Mulligan"
         twitter="https://www.twitter.com/hexagoncircle"
+        codepen="https://codepen.io/hexagoncircle/pen/bGqVyxm"
       />
     </section>
   );
