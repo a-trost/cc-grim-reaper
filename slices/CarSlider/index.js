@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import Credit from "../../components/Credit";
+import { RichText } from "prismic-reactjs";
 
 const MySlice = ({ slice }) => {
   return (
     <section className="relative p-12 overflow-hidden text-white bg-red-800 car-slider font-display lg:py-40 lg:px-0">
+      <div className="mb-28">
+        {slice.primary.title && (
+          <h2 className="mb-8 text-6xl font-medium text-center font-display">
+            {RichText.asText(slice.primary.title)}
+          </h2>
+        )}
+        {slice.primary.description && (
+          <p className="max-w-2xl mx-auto text-xl text-center font-body">
+            {RichText.asText(slice.primary.description)}
+          </p>
+        )}
+      </div>
       <div className="relative w-full m-auto md:max-w-6xl h-96">
         {slice?.items?.map((item, i) => (
           <React.Fragment key={`car-${i}`}>
