@@ -13,8 +13,8 @@ const MySlice = ({ slice }) => {
               {i > 0 && (
                 <label
                   htmlFor={`car-${i - 1}`}
-                  tabindex="0"
-                  tabindex="0"
+                  tabIndex="0"
+                  tabIndex="0"
                   className="absolute left-0 text-6xl transition transform -translate-y-1/2 opacity-50 cursor-pointer focus:ring-2 focus:ring-red-100 hover:opacity-100 top-1/2"
                 >
                   {"<"}
@@ -63,7 +63,7 @@ const MySlice = ({ slice }) => {
               {i < slice.items.length - 1 && (
                 <label
                   htmlFor={`car-${i + 1}`}
-                  tabindex="0"
+                  tabIndex="0"
                   className="absolute right-0 text-6xl transition transform -translate-y-1/2 opacity-50 cursor-pointer hover:opacity-100 top-1/2 focus:ring-2 focus:ring-red-100"
                 >
                   {">"}

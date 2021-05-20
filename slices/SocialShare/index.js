@@ -9,9 +9,9 @@ const MySlice = ({ slice }) => (
         <h1 className="text-3xl font-medium text-gray-900 title-font">
           {slice.primary.title}
         </h1>
-        <p className="mt-4 leading-relaxed">
+        <div className="mt-4 leading-relaxed">
           <RichText render={slice.primary.description} />
-        </p>
+        </div>
       </div>
       <div className="flex flex-col w-full p-8 mt-10 bg-gray-100 rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
         <h2 className="mb-5 text-lg font-medium text-gray-900 title-font">
