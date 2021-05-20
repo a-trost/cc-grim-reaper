@@ -31,14 +31,14 @@ const MySlice = ({ slice }) => {
               <div className="absolute left-0 right-0 w-3/4 m-auto transform -translate-y-1/2 lg:w-1/3 md:w-1/2 car top-1/2">
                 <img src={item.image.url} alt={item.carName} />
                 <img
-                  class="wheel wheel--back "
+                  className="wheel wheel--back "
                   src="https://assets.codepen.io/217233/grimwheel.svg"
                 />
                 <img
-                  class="wheel wheel--front"
+                  className="wheel wheel--front"
                   src="https://assets.codepen.io/217233/grimwheel.svg"
                 />
-                <div class="smoke">
+                <div className="smoke">
                   <div></div>
                   <div></div>
                   <div></div>
@@ -73,7 +73,7 @@ const MySlice = ({ slice }) => {
             {/* Slide End */}
           </React.Fragment>
         ))}
-        <div class="shad absolute left-0 right-0 transform -translate-y-1/2 m-auto"></div>
+        <div className="absolute left-0 right-0 m-auto transform -translate-y-1/2 shad"></div>
       </div>
       <Credit
         author="Jamie Coulter"

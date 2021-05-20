@@ -43,6 +43,27 @@
             "placeholder": ""
           },
           "type": "Text"
+        },
+        "color": {
+          "config": {
+            "label": "Color",
+            "placeholder": ""
+          },
+          "type": "Color"
+        },
+        "reaction": {
+          "config": {
+            "label": "Reaction",
+            "placeholder": "",
+            "options": [
+              "resting",
+              "dancing",
+              "laughing",
+              "shocked"
+            ],
+            "default_value": "resting"
+          },
+          "type": "Select"
         }
       }
     }
