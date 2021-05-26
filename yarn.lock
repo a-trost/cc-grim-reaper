@@ -6032,10 +6032,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.5.tgz"
   integrity sha512-kBBSQbz2K0Nyn+31j/w36fUfxkBW9/gfwRWdUY1ULReH3iokVJgddZAFcD1D0xlgTmFxJCbUkUclAlc6/IDJkw==
 
-gsap@^3.6.1:
+"gsap@npm:@gsap/shockingly":
   version "3.6.1"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.6.1.tgz#618f2338044d2b78b8cbced8ea8bf246d1cf6407"
-  integrity sha512-hCkjk7UVbeEmlpFbiy7lIsh742bwVlMhdCnnQ1CvVOAdURyPX8hXjFZGh/0YzUyAcWPyJPE0/paMhSYtLhGlfA==
+  resolved "https://npm.greensock.com/@gsap%2fshockingly/-/shockingly-3.6.1.tgz#6a0829e8df02e327da9927a8b0e45a67d34b98ba"
+  integrity sha512-tEWaJ2eP5jQPZfWXZv8SmlUxAUFJeiNIk1M47JTIF597gj7QQdILaNdhwa+Va2CCLMzO7w2noSeOhxoRVummqg==
 
 gud@^1.0.0:
   version "1.0.0"
