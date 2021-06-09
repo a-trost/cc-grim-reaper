@@ -1,0 +1,85 @@
+.social-share {
+  .graphic-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 28em;
+    & > div {
+      position: relative;
+      padding-top: 57.6%;
+    }
+    svg {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .share {
+    background: #b91c1c;
+    color: #fee2e2;
+    text-align: center;
+  }
+
+  .share h2 {
+    color: #fff;
+  }
+
+  .share--inner {
+    margin: 0 auto;
+    max-width: 75em;
+    padding: 4em 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .share--button {
+    appearance: none;
+    border: solid 2px transparent;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.08);
+    background: #fff;
+    color: #7f1d1d;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 2em;
+    padding: 0.5em 1em;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    &:hover {
+      background: #fee2e2;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px #7f1d1d, 0 0 0 8px #fff;
+      outline: 0;
+    }
+  }
+
+  .share--graphicHolder {
+    flex: 1 1 auto;
+    margin: 0 0 2em;
+    max-width: 28em;
+    width: 100%;
+
+    & > div {
+      position: relative;
+      padding-top: 57.6%;
+    }
+
+    svg {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
